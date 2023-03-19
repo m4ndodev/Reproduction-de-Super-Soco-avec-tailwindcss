@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En cours de développement</title>
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- JS -->
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <!-- CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                    spacing: {
+        '150': '9.3rem',
+        '50': '3.1rem',
+      },
+
+                }
+              }
+            }
+          </script>
+</head>
+
+<body class="font-[montserrat] bg-black h-screen">
+    <header class="bg-white">
+        <nav class="flex w-[92%] mx-auto">
+                <img class="h-[60px] w-50 cursor-pointer" src="images/logo.svg" alt="Logo du site">
+                <ul class="flex gap-8 ml-auto self-center justify-end">
+                    <li>
+                        <a href="#">Gammes</a>
+                    </li>
+                    <li>
+                        <a class="font-bold" href="#">Réserver un essai</a>
+                    </li>
+                    <li>
+                        <a href="#">Revendeurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Nous contacter</a>
+                    </li>
+                </ul>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
+</html>
