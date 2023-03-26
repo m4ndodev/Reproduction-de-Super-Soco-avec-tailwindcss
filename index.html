@@ -1,64 +1,233 @@
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En cours de développement</title>
-        <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- JS -->
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-        <!-- CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-              theme: {
-                extend: {
-                    spacing: {
-        '150': '9.3rem',
-        '50': '3.1rem',
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En cours de développement</title>
+  <!-- JS -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <!-- CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          spacing: {
+            '150': '9.3rem',
+            '50': '3.1rem',
+            '320': '320px',
+          },
+          padding: {
+        '12vh': '12vh',
+        '10vw': '10vw',
+        '2vw': '2vw',
       },
 
-                }
-              }
-            }
-          </script>
+          colors: {
+            'main-red': '#d11e26'
+          },
+
+          fontSize: {
+            '3xl': '2rem'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+
+      @font-face {
+    font-family: 'Dharma Gothic';
+    src: local('Dharma Gothic E Bold Italic'), local('Dharma-Gothic-E-Bold-Italic'),
+        url('fonts/DharmaGothicE-BoldItalic.woff2') format('woff2'),
+        url('fonts/DharmaGothicE-BoldItalic.woff') format('woff'),
+        url('fonts/DharmaGothicE-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }
+      
+h1,h2,h3,h4 {
+        font-family: 'Dharma Gothic';
+        font-style: italic;
+        font-weight: 800;
+        font-stretch: 100%;
+        letter-spacing: .2rem;
+        line-height: 4rem;
+      }
+
+      .home_list h2 {
+        font-size: 2rem;
+        text-align: center;
+        color: #d11e26
+}
+ .home_list p {
+     margin-top: 1.5vh;
+     font-size: .9em;
+     text-align: justify;
+     text-align: center 
+}
+
+.pl-10vw {
+  padding-left: 10vw;
+}
+
+    }
+  </style>
 </head>
 
-<body class="font-[montserrat] bg-black h-screen">
-    <header class="bg-white">
-        <nav class="flex w-[92%] mx-auto">
-                <img class="h-[60px] w-50 cursor-pointer" src="images/logo.svg" alt="Logo du site">
-                <ul class="flex gap-8 ml-auto self-center justify-end">
-                    <li>
-                        <a href="#">Gammes</a>
-                    </li>
-                    <li>
-                        <a class="font-bold" href="#">Réserver un essai</a>
-                    </li>
-                    <li>
-                        <a href="#">Revendeurs</a>
-                    </li>
-                    <li>
-                        <a href="#">Nous contacter</a>
-                    </li>
-                </ul>
-            <div class="flex items-center gap-6">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
-    </header>
+<body class="h-screen">
+  <header class="bg-white">
+    <nav class="flex w-[92%] mx-auto">
+      <img class="h-[60px] w-50 cursor-pointer" src="images/logo.svg" alt="Logo du site">
+      <ul class="flex gap-8 ml-auto self-center justify-end">
+        <li>
+          <a href="#">Gammes</a>
+        </li>
+        <li>
+          <a class="font-bold" href="#">Réserver un essai</a>
+        </li>
+        <li>
+          <a href="#">Revendeurs</a>
+        </li>
+        <li>
+          <a href="#">Nous contacter</a>
+        </li>
+      </ul>
+      <div class="flex items-center gap-6">
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+      </div>
+  </header>
+  <section class="h-screen w-full color-black top-0 left-0 z-[1] relative bg-black">
+    <div>
+      <video src="videos/video.mp4" class="w-full absolute" autoplay loop muted></video>
+      <div class="relative text-white ml-[9rem] pt-[20rem]">
+        <h1 class="text-[4rem]">Super Soco - TC Wanderer</h1>
+        <h2 class="text-[2rem]">Combinaison parfaite entre style néo-rétro et puissance.</h2>
+        <p class="text-red-500 text-[2rem]">4 390 €</p>
+        <br>
+        <button class="border-2 rounded-full p-3 text-base text-white">Découvrez la TC Wanderer</button>
+      </div>
+    </div>
+  </section>
 
+  <div class="p-[8.3rem] text-justify">
+    <section class="p-[5.3rem] p-[10rem] p-[4.8rem] h-20">
+      <h1 class="text-6xl leading-10 mb-10">Super Soco, Le meilleur du deux roues électrique</h1>
+      <p class="mb-0 mt-mb-0 mt-4">
+        Avec Super Soco, roulez aisément n'importe où tout en alliant puissance, autonomie et sécurité. Notre
+        technologie innovante est basée sur l’énergie électrique et électronique. Nous avons su apporter à la marque une
+        réelle expertise dans le domaine de la mobilité verte, sans compromis. Avec plusieurs modèles aujourd’hui
+        commercialisés en France, nous avons développé un important réseau de distributeurs où vous pourrez retrouver
+        nos véhicules économiques à l’utilisation et généreuses en sensation.
+      </p>
+      <!-- 4 elements -->
+      <div class="flex justify-between my-20">
+        <div> <!-- col1 -->
+          <h2 class="text-main-red text-3xl flex justify-center">Écoresponsabilité</h2>
+          <p class="my-4">Ensemble protégeons la planète</p>
+        </div>
 
+        <div> <!-- col2 -->
+          <h2 class="text-main-red text-3xl flex justify-center">Design</h2>
+          <p class="my-4">Un design épuré et tendance</p>
+        </div>
 
-    <script>
+        <div> <!-- col3 -->
+          <h2 class="text-main-red text-3xl flex justify-center">Technologies</h2>
+          <p class="my-4">À la pointe de la technologie</p>
+        </div>
+
+        <div> <!-- col4 -->
+          <h2 class="text-main-red text-3xl flex justify-center">Mobilité électrique</h2>
+          <p class="my-4">Pour aller partout où vous le souhaitez</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="h-screen flex bg-black my-80 bg-[url('images/cpx_detail.webp')] bg-no-repeat bg-right bg-contain">
+    <div class="w-[41%] text-white flex flex-col justify-center">
+      <div class="pl-[10vw]">
+    <h2 class="text-3xl">CPx, roulez avec plaisir et sérénité</h2>
+    <p class="mt-[5vh]">Ce scooter électrique avec l’équivalent d’un 125cc, a une autonomie de 90km, et peut atteindre une vitesse max de 90km/h.    </p>
+    <p class="mt-[5vh]">Il est maniable et confortable à la fois, parfait pour vous accompagner dans vos déplacements au quotidien.    </p>
+    <div class="inline-flex mt-16">
+      <div class="w-40 flex justify-center flex-col">
+        <img class="h-[36px]" src="images/clock_supersoco.svg">
+        <p class="mt-[1.5vh] h-[20px] text-center">3h30 Temps de charge</p>
+      </div>
+      <div class="w-40 flex justify-center flex-col">
+        <img class="h-[36px]" src="images/weight_supersoco.svg">
+        <p class="mt-[1.5vh] text-center">95 Kg</p>
+      </div>
+      <div class="w-40 flex justify-center flex-col">
+        <img class="h-[36px]" src="images/battery_supercoco.svg">
+        <p class="mt-[1.5vh] text-center">1 ou 2 batteries</p>
+      </div>
+    </div>
+    <button class="text-[#d11e26] py-4 px-12 border-2 border-[#d11e26] mx-20 my-20 flex rounded-full relative">Découvrez notre CPx</button>
+  </div>
+</div>
+  </section>
+
+  <section class="-mt-80 -mb-80 h-320 py-[9.9rem] px-[16rem] flex items-center justify-between">
+    <div class="flex justify-between">
+       <div>
+          <h2 class="text-center text-3xl m-0">Silencieux</h2>
+          <p class="m-[3vh] text-center">Au démarrage et lorsque vous roulez, votre 2 roues est silencieux. Un réel avantage pour les nuisances sonores.</p>
+       </div>
+       <div>
+          <h2 class="text-center text-3xl m-0">Avenir</h2>
+          <p class="m-[3vh] text-center">Limiter le plus possible le réchauffement climatique en réduisant l’utilisation des combustibles fossiles.</p>
+       </div>
+       <div>
+          <h2 class="text-center text-3xl m-0">Peu d&#x27;entretien</h2>
+          <p class="m-[3vh] text-center">Le système simplifié du moteur, l’absence de boîte de vitesse et d’huile, fait que l’entretien est économique.</p>
+       </div>
+    </div>
+ </section>
+
+ <div>
+ <section class="h-screen flex bg-black my-80 bg-[url('images/tcmax_black.webp')] bg-no-repeat bg-right bg-contain">
+  <div class="w-[41%] text-white flex flex-col justify-center">
+    <div class="pl-[10vw]">
+  <h2 class="text-3xl">CPx, roulez avec plaisir et sérénité</h2>
+  <p class="mt-[5vh]">Ce scooter électrique avec l’équivalent d’un 125cc, a une autonomie de 90km, et peut atteindre une vitesse max de 90km/h.    </p>
+  <p class="mt-[5vh]">Il est maniable et confortable à la fois, parfait pour vous accompagner dans vos déplacements au quotidien.    </p>
+  <div class="inline-flex mt-16">
+    <div class="w-40 flex justify-center flex-col">
+      <img class="h-[36px]" src="images/clock_supersoco.svg">
+      <p class="mt-[1.5vh] h-[20px] text-center">3h30 Temps de charge</p>
+    </div>
+    <div class="w-40 flex justify-center flex-col">
+      <img class="h-[36px]" src="images/weight_supersoco.svg">
+      <p class="mt-[1.5vh] text-center">95 Kg</p>
+    </div>
+    <div class="w-40 flex justify-center flex-col">
+      <img class="h-[36px]" src="images/battery_supercoco.svg">
+      <p class="mt-[1.5vh] text-center">1 ou 2 batteries</p>
+    </div>
+  </div>
+  <button class="text-[#d11e26] py-4 px-12 border-2 border-[#d11e26] mx-20 my-20 flex rounded-full relative">Découvrez notre CPx</button>
+</div>
+</div>
+</section>
+</div>
+
+      <script>
         const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
+        function onToggleMenu(e) {
+          e.name = e.name === 'menu' ? 'close' : 'menu'
+          navLinks.classList.toggle('top-[9%]')
         }
-    </script>
+      </script>
 </body>
 
 </html>
